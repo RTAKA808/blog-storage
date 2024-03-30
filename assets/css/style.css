@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+#blog-box{
+    height: 100px;
+    Width: 100px;
+}
