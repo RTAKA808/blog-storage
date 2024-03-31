@@ -4,7 +4,7 @@ const blogInput=document.querySelector('#blogpost');
 const button= document.querySelector('.button');
 
 
-   
+
 
 button.addEventListener('click',function(event) {
 event.preventDefault();
@@ -13,7 +13,14 @@ let storeBlogs={
     title:titleInput.value,
     blog:blogInput.value,
    }
-let blogArray=[storeBlogs]
+
+let blog=JSON.parse(localStorage.getItem('blogs'))
+
+if(!blog){
+    blog=[]
+}
+blog.push(storeBlogs);
+
 if (!storeBlogs.names){
     alert('You must enter a name');
 }else if (!storeBlogs.title){
@@ -22,7 +29,7 @@ if (!storeBlogs.names){
     alert('You must write something to post');
 }else{
 
-localStorage.setItem('blogs',JSON.stringify(storeBlogs));
+localStorage.setItem('blogs',JSON.stringify(blog));
 location.href= './blog.html';
 
 }
