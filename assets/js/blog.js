@@ -1,6 +1,9 @@
 const blogPosts=document.querySelector('#blogposts')
 const button=document.querySelector('.button')
+const darkLight=document.querySelector('#darklight')
+const body=document.querySelector('body')
 
+let mode='dark'
 
 function renderBlog(){
     let storedBlogs=JSON.parse(localStorage.getItem('blogs'));
@@ -26,6 +29,18 @@ function renderBlog(){
         }
 
     }}
+
+    darkLight.addEventListener('click',function(){
+        
+        if (mode==='dark') {
+            mode='light';
+        body.setAttribute('class','light')
+        }
+        else {
+            mode='dark';
+            body.setAttribute('class','dark');
+        }
+    })
 
     button.addEventListener('click',function(){
         location.href='./landing.html'

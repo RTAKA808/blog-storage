@@ -20,3 +20,15 @@ justify-content: space-between;
 .button{
 
 }
+#darklight{
+
+}
+.dark{
+ background-color: rgb(98, 97, 97);
+ height: 100vh;
+}
+
+.light{
+background-color: antiquewhite;
+height: 100vh;
+}
