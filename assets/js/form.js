@@ -3,24 +3,28 @@ const titleInput=document.querySelector('#title');
 const blogInput=document.querySelector('#blogpost');
 const button= document.querySelector('.button');
 
+
+   
+
 button.addEventListener('click',function(event) {
 event.preventDefault();
-const name=nameInput.value;
-const title=titleInput.value;
-const blog=blogInput.value;
+let storeBlogs={
+    names:nameInput.value,
+    title:titleInput.value,
+    blog:blogInput.value,
+   }
+let blogArray=[storeBlogs]
+if (!storeBlogs.names){
+    alert('You must enter a name');
+}else if (!storeBlogs.title){
+    alert('You must enter a title');
+}else if (!storeBlogs.blog) {
+    alert('You must write something to post');
+}else{
 
-if (name===''){
-    displayMessage('You must enter a name');
-}else if (title===''){
-    displayMessage('You must enter a title');
-}else if (blog==='') {
-    displayMessage('You must write something to post');
+localStorage.setItem('blogs',JSON.stringify(storeBlogs));
+location.href= './blog.html';
+
 }
-
-localStorage.setItem('name',name);
-localStorage.setItem('title', title);
-localStorage.setItem('blog', blog);
-
-
 
 })
