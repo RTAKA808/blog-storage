@@ -17,3 +17,12 @@ see repository for license information
 
 
 ## links
+github repository : https://github.com/RTAKA808/blog-storage
+
+live page :https://rtaka808.github.io/blog-storage/ 
+
+![alt text](<assets/img/blog landing page.JPG>)
+
+![alt text](<assets/img/blog page dark.JPG>)
+
+![alt text](<assets/img/blog page light.JPG>)
