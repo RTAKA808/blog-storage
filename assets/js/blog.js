@@ -43,6 +43,6 @@ function renderBlog(){
     })
 
     button.addEventListener('click',function(){    //adds functionality to "back" button that links back to the landing page
-        location.href='./landing.html'
+        location.href='./index.html'
     })
     document.addEventListener('DOMContentLoaded',renderBlog)
