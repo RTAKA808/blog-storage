@@ -6,6 +6,14 @@
     
 
 }
+
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px;
+
+
+}
 main{
     height: 100vh;
 
@@ -14,7 +22,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image:radial-gradient( lightblue,white );
+
 }
 h1{
    text-align: center; 

@@ -1,15 +1,15 @@
 const blogPosts=document.querySelector('#blogposts')
 const button=document.querySelector('.button')
-const darkLight=document.querySelector('#darklight')
+
 const body=document.querySelector('body')
 
-let mode='dark'
+
 
 function renderBlog(){
-    let storedBlogs=JSON.parse(localStorage.getItem('blogs'));  //retrieves the form data from local storage as an array full object
+    let storedBlogs=JSON.parse(localStorage.getItem('blogs'));  //retrieves the form data from local storage as an array full of object(s)
     if(storedBlogs) {       //if there are stored blogs then it loops through the array
         for(let index=0; index<storedBlogs.length;index++){
-            let storedBlog=storedBlogs[index];
+            let storedBlog=storedBlogs[index];  //variable which contains each thing in the array
         let blogPostContainer=document.createElement('div');   //variable for creating a new div to act as the container for the posts
         let blogContent=document.createElement('p')  //variable for creating new paragraphs inside of the container for each field of text that was entered in the previous page
         let blogTitle=document.createElement('p');
@@ -30,17 +30,7 @@ function renderBlog(){
 
     }}
 
-    darkLight.addEventListener('click',function(){  //adds even listener for the dark/light mode button
-        
-        if (mode==='dark') {
-            mode='light';
-        body.setAttribute('class','light');
-        }
-        else {
-            mode='dark';
-            body.setAttribute('class','dark');
-        }
-    })
+ 
 
     button.addEventListener('click',function(){    //adds functionality to "back" button that links back to the landing page
         location.href='./index.html'
